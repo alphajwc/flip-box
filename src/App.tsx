@@ -1,24 +1,18 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FlipBox from './FlipBox';
+import FlipBoxFront from './FlipBoxFront';
+import FlipBoxBack from './FlipBoxBack';
+import {Direction} from './FlipBox'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <FlipBox direction={Direction.v} width='20em' height='10em'>
+          <FlipBoxFront backgroundColor='blue' textAlign='left'><p>abc</p></FlipBoxFront>
+          <FlipBoxBack backgroundColor='red' textAlign='center'><p>def</p></FlipBoxBack>
+        </FlipBox>
     </div>
   );
 }

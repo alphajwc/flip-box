@@ -1,0 +1,33 @@
+.flipBox{
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    
+}
+
+.flipBoxFront, .flipBoxBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipBoxH:hover{
+    transform: rotateY(180deg);
+}
+
+.flipBoxH .flipBoxBack{
+    transform: rotateY(180deg);
+}
+
+.flipBoxV:hover{
+    transform: rotateX(180deg);
+}
+.flipBoxV .flipBoxBack{
+    transform: rotateX(180deg);
+}
+
+
+

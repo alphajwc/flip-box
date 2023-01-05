@@ -12,7 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 
 ### REACT Typescript Example
-```
+```jsx
 function App() {
   return (
     <div className="App">

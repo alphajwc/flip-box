@@ -6,36 +6,53 @@
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-## Demo Website
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### DEMO
+<img src="https://github.com/jacksonCV1114/flip-box/blob/master/demo.gif" width="300"/>
 
 
-### Example
+### REACT Typescript Example
 ```
-<html>
-     <body>
-        <div id="target1" style="position:absolute;top:1000px;">
-            <p> I am the long long long long long long long long long target</p>
-        </div>  
-        <div id="target2" style="position:absolute;top:300px;">
-            <p> I am the target</p>
-        </div>  
-        <div id="target3" style="position:absolute;top:300px;left:400px">
-            <p> I am the target</p>
-        </div>  
-    </body>
-  
-    <script>
-        const stepList = [];
-        stepList.push(new Step('target1',`<img width='200px' height='200px' src="image.jpg">`,`Let me show you`))
-        stepList.push(new Step('target2','Title 2','Description2'))
-        stepList.push(new Step('target3','Title 3','Description3'))
-        const tinyTour = new TinyTour(stepList);
-    </script>
-</html>
+function App() {
+  return (
+    <div className="App">
+        <h1>Horizontal FlipBox</h1>
+        <FlipBox direction={Direction.h} width='20em' height='10em'>
+          <FlipBoxFront backgroundColor='#4E5A6C' textAlign='left' color='white'>
+          <div style={{margin:'1em',textAlign:'center'}}>
+            <img src='/logo.svg' alt="logo" width='80em'></img>
+            <p>CONTENT AT FRONT</p>
+            <p>Vertically Flip Demo</p>
+          </div>
+          </FlipBoxFront>
+          <FlipBoxBack backgroundColor='#ebdfc7' textAlign='center' color='black'>
+          <div style={{margin:'1em',textAlign:'center'}}>
+            <img src='/logo.svg' alt="logo" width='80em'></img>
+            <p>CONTENT AT BACK</p>
+            <p>Vertically Flip Demo</p>
+          </div>
+          </FlipBoxBack>
+        </FlipBox>
+        
+        <h1>Vertical FlipBox</h1>
+        <FlipBox direction={Direction.v} width='20em' height='10em'>
+          <FlipBoxFront backgroundColor='#4E5A6C' textAlign='left' color='white'>
+          <div style={{margin:'1em',textAlign:'center'}}>
+            <img src='/logo.svg' alt="logo" width='80em'></img>
+            <p>CONTENT AT FRONT</p>
+            <p>Vertically Flip Demo</p>
+          </div>
+          </FlipBoxFront>
+          <FlipBoxBack backgroundColor='#ebdfc7' textAlign='center' color='black'>
+          <div style={{margin:'1em',textAlign:'center'}}>
+            <img src='/logo.svg' alt="logo" width='80em'></img>
+            <p>CONTENT AT BACK</p>
+            <p>Vertically Flip Demo</p>
+          </div>
+          </FlipBoxBack>
+        </FlipBox>
+    </div>
+  );
+}
+
 ```

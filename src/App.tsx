@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 import FlipBox from './FlipBox';
 import FlipBoxFront from './FlipBoxFront';
 import FlipBoxBack from './FlipBoxBack';
@@ -10,8 +8,20 @@ function App() {
   return (
     <div className="App">
         <FlipBox direction={Direction.v} width='20em' height='10em'>
-          <FlipBoxFront backgroundColor='blue' textAlign='left'><p>abc</p></FlipBoxFront>
-          <FlipBoxBack backgroundColor='red' textAlign='center'><p>def</p></FlipBoxBack>
+          <FlipBoxFront backgroundColor='#4E5A6C' textAlign='left' color='white'>
+          <div style={{margin:'1em',textAlign:'center'}}>
+            <img src='/logo.svg' alt="logo" width='80em'></img>
+            <p>CONTENT AT FRONT</p>
+            <p>Vertically Flip Demo</p>
+          </div>
+          </FlipBoxFront>
+          <FlipBoxBack backgroundColor='#ebdfc7' textAlign='center' color='black'>
+          <div style={{margin:'1em',textAlign:'center'}}>
+            <img src='/logo.svg' alt="logo" width='80em'></img>
+            <p>CONTENT AT BACK</p>
+            <p>Vertically Flip Demo</p>
+          </div>
+          </FlipBoxBack>
         </FlipBox>
     </div>
   );

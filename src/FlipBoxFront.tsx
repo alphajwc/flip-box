@@ -1,9 +1,9 @@
 import styles from "./FlipBox.module.css"
 import Property from 'csstype'
 
-function FlipBoxFront({children,backgroundColor,textAlign}:{children:JSX.Element|JSX.Element[],backgroundColor:string,textAlign:Property.Property.TextAlign}){
+function FlipBoxFront({children,backgroundColor,textAlign,color}:{children:JSX.Element|JSX.Element[],backgroundColor:string,textAlign:Property.Property.TextAlign,color:Property.Property.Color}){
     return(
-        <div className ={styles.flipBoxFront} style={{backgroundColor:backgroundColor, textAlign:textAlign}}>{children}</div>
+        <div className ={styles.flipBoxFront} style={{backgroundColor:backgroundColor, textAlign:textAlign,color:color}}>{children}</div>
     )
 
 }
